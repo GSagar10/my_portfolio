@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume - Sagar Gharge</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .left-panel {
+      width: 280px;
+      padding: 30px 20px;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+    }
+    .left-panel h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .contact-info {
+      width: 100%;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .contact-info p, .contact-info a {
+      margin: 5px 0;
+      display: block;
+      text-decoration: none;
+      color: #444;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .section ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .section ul li {
+      margin-bottom: 6px;
+    }
+    .right-panel {
+      flex-grow: 1;
+      padding: 30px;
+    }
+    h3, h4 {
+      margin-top: 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 15px 0;
+    }
+    .declaration {
+      background: #fff;
+      border-top: 1px solid #ddd;
+      padding: 15px 30px;
+      font-size: 14px;
+      color: #006666;
+      font-weight: bold;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .declaration span {
+      font-weight: normal;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="left-panel">
+      <img src="Sagar Gharge.jpg" alt="Sagar Gharge" class="profile-photo" />
+      <h2>Sagar Gharge</h2>
+      <div class="contact-info">
+        <p>📍 Bangalore, Karnataka, India</p>
+        <p>📞 +91 7387274633</p>
+        <p>✉️ <a href="mailto:sagar.gharge10491@gmail.com">sagar.gharge10491@gmail.com</a></p>
+        <p>🛂 Passport No: R3562770</p>
+        <p>🔗 <a href="https://linkedin.com/in/sagar-gharge-4017347a" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      </div>
+
+      <div class="section">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Linux OS: RHEL 7/8, CentOS 7.9</li>
+          <li>Linux Services: NFS, Samba</li>
+          <li>Storage: LVM</li>
+          <li>Scripting: Shell scripting</li>
+          <li>Server Hardware: Dell, Cisco</li>
+          <li>Ticketing Tools: ServiceNow, Jira</li>
+          <li>Monitoring Tool: Grafana</li>
+          <li>Cloud Platform: AWS</li>
+          <li>Virtualization: VMware ESXi</li>
+          <li>Automation: Ansible Tower</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Certifications</h3>
+        <ul>
+          <li>RHCSA</li>
+          <li>RHCE</li>
+          <li>Linux Admin Essentials</li>
+          <li>Ansible Automation</li>
+          <li>ITIL4 Foundation</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Education</h3>
+        <p>MCA – Pune University</p>
+        <p>BCA – Shivaji University, Kolhapur</p>
+      </div>
+    </aside>
+
+    <main class="right-panel">
+      <div class="section">
+        <h3>Work Experience</h3>
+
+        <h4>Linux System Administrator – OPT IT Technology Pvt. Ltd. (Client: Analog Devices)</h4>
+        <p><strong>June 2021 – Present</strong></p>
+        <ul>
+          <li>Maintained Red Hat Linux servers with 99.9% uptime.</li>
+          <li>Configured SSL VPN, ETX, VDI, and integrated AD and LDAP for authentication.</li>
+          <li>Used ServiceNow, Jira for ticketing; Grafana for monitoring.</li>
+          <li>Administered Dell & Cisco servers with IDRAC/UCS.</li>
+          <li>Automated tasks with Ansible Tower and enabled Duo 2FA.</li>
+          <li>Performed V2V migrations on VMware ESXi.</li>
+        </ul>
+
+        <hr />
+
+        <h4>Linux System Administrator – Starsun Technology Pvt. Ltd., Pune</h4>
+        <p><strong>Dec 2016 – Nov 2019</strong></p>
+        <ul>
+          <li>Installed and maintained CentOS and RHEL 7 servers.</li>
+          <li>Managed users/groups, configured services, disk partitions.</li>
+          <li>Used cron and YUM for automation and patching.</li>
+          <li>Configured Linux on VMware environments.</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <div class="declaration">
+    Declaration: <span>I hereby declare that the information provided above is true to the best of my knowledge and belief.</span>
+  </div>
+
+</body>
+</html>
