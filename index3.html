@@ -1,186 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume - Sagar Gharge</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      display: flex;
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    .left-panel {
-      width: 280px;
-      padding: 30px 20px;
-      border-right: 1px solid #ddd;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 8px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-    }
-    .left-panel h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-    }
-    .contact-info {
-      width: 100%;
-      font-size: 14px;
-      color: #444;
-      margin-bottom: 20px;
-    }
-    .contact-info p, .contact-info a {
-      margin: 5px 0;
-      display: block;
-      text-decoration: none;
-      color: #444;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .section h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-    .section ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-    .section ul li {
-      margin-bottom: 6px;
-    }
-    .right-panel {
-      flex-grow: 1;
-      padding: 30px;
-    }
-    h3, h4 {
-      margin-top: 0;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 15px 0;
-    }
-    .declaration {
-      background: #fff;
-      border-top: 1px solid #ddd;
-      padding: 15px 30px;
-      font-size: 14px;
-      color: #006666;
-      font-weight: bold;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .declaration span {
-      font-weight: normal;
-      color: #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Sagar Gharge | Linux & AWS Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: #0f172a;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .tabs {
+            display: flex;
+            background: #1e293b;
+        }
+
+        .tabs button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: none;
+            color: #cbd5e1;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .tabs button:hover,
+        .tabs button.active {
+            background: #0f172a;
+            color: #38bdf8;
+        }
+
+        .content {
+            padding: 30px;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .skills-section {
+            margin-bottom: 25px;
+        }
+
+        .skills-section h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .contact a {
+            display: block;
+            text-decoration: none;
+            color: #0f172a;
+            margin: 12px 0;
+            font-size: 16px;
+        }
+
+        .contact i {
+            color: #38bdf8;
+            margin-right: 10px;
+        }
+
+        footer {
+            background: #f1f5f9;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #475569;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <aside class="left-panel">
-      <img src="Sagar Gharge.jpg" alt="Sagar Gharge" class="profile-photo" />
-      <h2>Sagar Gharge</h2>
-      <div class="contact-info">
-        <p>📍 Bangalore, Karnataka, India</p>
-        <p>📞 +91 7387274633</p>
-        <p>✉️ <a href="mailto:sagar.gharge10491@gmail.com">sagar.gharge10491@gmail.com</a></p>
-        <p>🛂 Passport No: R3562770</p>
-        <p>🔗 <a href="https://linkedin.com/in/sagar-gharge-4017347a" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-      </div>
+<div class="container">
 
-      <div class="section">
-        <h3>Technical Skills</h3>
+    <header>
+        <h1>👋 Hi, I'm Sagar Gharge</h1>
+        <p>💼 Linux & AWS Administrator | Infrastructure Engineer</p>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('about')"><i class="fa-solid fa-user"></i> About</button>
+        <button class="tab-btn" onclick="openTab('skills')"><i class="fa-solid fa-gears"></i> Skills</button>
+        <button class="tab-btn" onclick="openTab('focus')"><i class="fa-solid fa-rocket"></i> Focus</button>
+        <button class="tab-btn" onclick="openTab('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="content active">
+        <h2>🛠 About Me</h2>
+        <p>
+            Linux & AWS Administrator with <b>6+ years</b> of experience managing enterprise infrastructure,
+            automating operations, and ensuring high availability of production environments.
+        </p>
+        <p>
+            Strong expertise in Linux administration, cloud platforms, automation tools,
+            and infrastructure monitoring.
+        </p>
+        <p><i class="fa-solid fa-bolt"></i> Fun fact: I debug servers faster than choosing lunch 😄</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="content">
+        <h2>🚀 Technical Skills</h2>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-desktop"></i> Operating Systems</h3>
+            <span class="skill-badge">RHEL 7 / 8</span>
+            <span class="skill-badge">CentOS 7.9</span>
+            <span class="skill-badge">Unix</span>
+            <span class="skill-badge">Windows 7 / 8 / 10</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-network-wired"></i> Linux Services</h3>
+            <span class="skill-badge">NFS</span>
+            <span class="skill-badge">Samba</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-database"></i> Storage Management</h3>
+            <span class="skill-badge">LVM Creation</span>
+            <span class="skill-badge">Resizing</span>
+            <span class="skill-badge">Optimization</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-code"></i> Scripting & Automation</h3>
+            <span class="skill-badge">Shell Scripting</span>
+            <span class="skill-badge">Ansible</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-server"></i> Server Hardware</h3>
+            <span class="skill-badge">Dell PowerEdge</span>
+            <span class="skill-badge">Cisco UCS</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-chart-line"></i> Monitoring & ITSM</h3>
+            <span class="skill-badge">Grafana</span>
+            <span class="skill-badge">ServiceNow</span>
+            <span class="skill-badge">Jira</span>
+            <span class="skill-badge">ManageEngine</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-brands fa-aws"></i> Cloud Platform (AWS)</h3>
+            <span class="skill-badge">EC2</span>
+            <span class="skill-badge">S3</span>
+            <span class="skill-badge">VPC</span>
+            <span class="skill-badge">IAM</span>
+            <span class="skill-badge">RDS</span>
+            <span class="skill-badge">CloudWatch</span>
+            <span class="skill-badge">Lambda</span>
+            <span class="skill-badge">Auto Scaling</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-box"></i> DevOps & Cloud Tools</h3>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Terraform (Basic)</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">Kubernetes (Fundamentals)</span>
+        </div>
+    </div>
+
+    <!-- FOCUS -->
+    <div id="focus" class="content">
+        <h2>📌 Current Focus</h2>
         <ul>
-          <li>Linux OS: RHEL 7/8, CentOS 7.9</li>
-          <li>Linux Services: NFS, Samba</li>
-          <li>Storage: LVM</li>
-          <li>Scripting: Shell scripting</li>
-          <li>Server Hardware: Dell, Cisco</li>
-          <li>Ticketing Tools: ServiceNow, Jira</li>
-          <li>Monitoring Tool: Grafana</li>
-          <li>Cloud Platform: AWS</li>
-          <li>Virtualization: VMware ESXi</li>
-          <li>Automation: Ansible Tower</li>
+            <li>⚙ Advanced Ansible automation</li>
+            <li>☁ AWS infrastructure design</li>
+            <li>🔄 CI/CD & DevOps practices</li>
+            <li>📊 Monitoring & reliability engineering</li>
         </ul>
-      </div>
+    </div>
 
-      <div class="section">
-        <h3>Certifications</h3>
-        <ul>
-          <li>RHCSA</li>
-          <li>RHCE</li>
-          <li>Linux Admin Essentials</li>
-          <li>Ansible Automation</li>
-          <li>ITIL4 Foundation</li>
-        </ul>
-      </div>
+    <!-- CONTACT -->
+    <div id="contact" class="content contact">
+        <h2>🔗 Connect With Me</h2>
 
-      <div class="section">
-        <h3>Education</h3>
-        <p>MCA – Pune University</p>
-        <p>BCA – Shivaji University, Kolhapur</p>
-      </div>
-    </aside>
+        <a href="https://www.linkedin.com/in/sagar-gharge-4017347a" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn: Sagar Gharge
+        </a>
 
-    <main class="right-panel">
-      <div class="section">
-        <h3>Work Experience</h3>
+        <a href="mailto:sagar.gharge10491@gmail.com">
+            <i class="fa-solid fa-envelope"></i> sagar.gharge10491@gmail.com
+        </a>
 
-        <h4>Linux System Administrator – OPT IT Technology Pvt. Ltd. (Client: Analog Devices)</h4>
-        <p><strong>June 2021 – Present</strong></p>
-        <ul>
-          <li>Maintained Red Hat Linux servers with 99.9% uptime.</li>
-          <li>Configured SSL VPN, ETX, VDI, and integrated AD and LDAP for authentication.</li>
-          <li>Used ServiceNow, Jira for ticketing; Grafana for monitoring.</li>
-          <li>Administered Dell & Cisco servers with IDRAC/UCS.</li>
-          <li>Automated tasks with Ansible Tower and enabled Duo 2FA.</li>
-          <li>Performed V2V migrations on VMware ESXi.</li>
-        </ul>
+        <a href="#">
+            <i class="fa-brands fa-github"></i> GitHub Portfolio
+        </a>
+    </div>
 
-        <hr />
+    <footer>
+        💡 Open to Linux, AWS & Automation collaboration opportunities
+    </footer>
 
-        <h4>Linux System Administrator – Starsun Technology Pvt. Ltd., Pune</h4>
-        <p><strong>Dec 2016 – Nov 2019</strong></p>
-        <ul>
-          <li>Installed and maintained CentOS and RHEL 7 servers.</li>
-          <li>Managed users/groups, configured services, disk partitions.</li>
-          <li>Used cron and YUM for automation and patching.</li>
-          <li>Configured Linux on VMware environments.</li>
-        </ul>
-      </div>
-    </main>
-  </div>
+</div>
 
-  <div class="declaration">
-    Declaration: <span>I hereby declare that the information provided above is true to the best of my knowledge and belief.</span>
-  </div>
+<script>
+    function openTab(tabId) {
+        let contents = document.querySelectorAll('.content');
+        let buttons = document.querySelectorAll('.tab-btn');
+
+        contents.forEach(c => c.classList.remove('active'));
+        buttons.forEach(b => b.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
 
 </body>
 </html>
+
