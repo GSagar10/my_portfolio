@@ -4,58 +4,75 @@
     <meta charset="UTF-8">
     <title>Sagar Gharge | Linux & AWS Administrator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
             margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             color: #333;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             background: #ffffff;
-            padding: 30px;
+            padding: 40px;
         }
-        h1, h2 {
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #eee;
+        }
+        header h1 {
+            margin: 0;
             color: #0a4fa3;
+            font-size: 36px;
         }
-        h1 {
-            margin-bottom: 5px;
-        }
-        .title {
+        header p {
             font-size: 18px;
             color: #555;
-            margin-bottom: 20px;
+        }
+        section {
+            margin-top: 35px;
+        }
+        h2 {
+            color: #0a4fa3;
+            border-left: 5px solid #0a4fa3;
+            padding-left: 10px;
         }
         ul {
             padding-left: 20px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
-        .section {
-            margin-bottom: 30px;
-        }
-        .badge {
+        .badges span {
             display: inline-block;
             background: #0a4fa3;
             color: #fff;
-            padding: 5px 10px;
-            margin: 5px 5px 0 0;
-            border-radius: 4px;
+            padding: 8px 14px;
+            margin: 6px 6px 0 0;
+            border-radius: 20px;
             font-size: 14px;
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
+        .highlight {
+            background: #f4f8ff;
+            padding: 20px;
+            border-left: 4px solid #0a4fa3;
         }
         a {
             color: #0a4fa3;
             text-decoration: none;
+            font-weight: 500;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
@@ -63,77 +80,88 @@
 
 <div class="container">
 
-    <h1>👋 Hi, I'm Sagar Gharge</h1>
-    <div class="title">
-        💼 Linux & AWS Administrator | Infrastructure Engineer
-    </div>
+    <!-- Header -->
+    <header>
+        <h1>👋 Hi, I'm Sagar Gharge</h1>
+        <p>💼 Linux & AWS Administrator | Infrastructure Engineer</p>
+        <p>6+ Years of Experience in Linux, Cloud & Automation</p>
+    </header>
 
-    <p>
-        I have over <strong>6+ years of experience</strong> managing, supporting,
-        and automating Linux-based infrastructure with strong expertise in
-        <strong>AWS, RHEL, and DevOps tools</strong>.
-    </p>
+    <!-- About -->
+    <section>
+        <h2>🛠 About Me</h2>
+        <div class="highlight">
+            <p>
+                I am a passionate <strong>Linux System Administrator</strong> with over
+                <strong>6+ years of hands-on experience</strong> in managing and automating
+                enterprise Linux infrastructure. I specialize in <strong>RHEL, AWS</strong>,
+                and DevOps tools, ensuring high availability, security, and performance
+                for business-critical systems.
+            </p>
+        </div>
+    </section>
 
-    <div class="section">
+    <!-- Skills -->
+    <section>
         <h2>🚀 Skills & Technologies</h2>
         <ul>
-            <li><strong>Operating Systems & Platforms:</strong> Linux (RHEL), AWS</li>
-            <li><strong>Version Control:</strong> Git, GitHub</li>
-            <li><strong>Automation:</strong> Ansible Playbooks</li>
-            <li><strong>Other:</strong> Infrastructure Monitoring & Troubleshooting</li>
+            <li>🖥 <strong>Operating Systems:</strong> Linux (RHEL, Ubuntu)</li>
+            <li>☁️ <strong>Cloud Platform:</strong> Amazon Web Services (AWS)</li>
+            <li>🔧 <strong>Automation:</strong> Ansible Playbooks</li>
+            <li>📦 <strong>Version Control:</strong> Git, GitHub</li>
+            <li>📊 <strong>Monitoring & Support:</strong> Infrastructure Monitoring & Troubleshooting</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>🛠 About Me</h2>
-        <p>
-            I’m a passionate Linux System Administrator with more than six years of
-            hands-on experience in infrastructure management, automation, and cloud platforms.
-            I enjoy optimizing systems, automating repetitive tasks, and ensuring
-            high availability and performance for business-critical environments.
-        </p>
-    </div>
-
-    <div class="section">
+    <!-- Current Focus -->
+    <section>
         <h2>📌 Current Focus</h2>
         <ul>
-            <li>Enhancing automation using Ansible</li>
-            <li>Expanding AWS cloud architecture skills</li>
-            <li>Exploring CI/CD integrations</li>
+            <li>⚙️ Enhancing automation using Ansible</li>
+            <li>☁️ Designing scalable AWS architectures</li>
+            <li>🔁 Exploring CI/CD pipeline integrations</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <!-- GitHub Intro -->
+    <section>
         <h2>🌟 Quick GitHub Intro</h2>
         <ul>
             <li>👀 Interested in DevOps & Cloud Infrastructure</li>
             <li>🌱 Currently learning advanced DevOps pipelines</li>
-            <li>💞️ Looking to collaborate on Linux, AWS, and automation projects</li>
+            <li>🤝 Looking to collaborate on Linux, AWS, and automation projects</li>
             <li>⚡ Fun fact: I can debug a server faster than I can decide what to eat for lunch</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <!-- Tech Badges -->
+    <section>
         <h2>🏷 Tech Badges</h2>
-        <span class="badge">Linux</span>
-        <span class="badge">AWS</span>
-        <span class="badge">Ansible</span>
-        <span class="badge">Git</span>
-    </div>
+        <div class="badges">
+            <span>Linux</span>
+            <span>AWS</span>
+            <span>Ansible</span>
+            <span>Git</span>
+            <span>DevOps</span>
+        </div>
+    </section>
 
-    <div class="section">
+    <!-- Contact -->
+    <section>
         <h2>🔗 Connect with Me</h2>
         <ul>
-            <li><strong>LinkedIn:</strong> <a href="#">Sagar Gharge</a></li>
-            <li><strong>Email:</strong> <a href="mailto:sagar.gharge10491@gmail.com">sagar.gharge10491@gmail.com</a></li>
+            <li>🔗 <strong>LinkedIn:</strong> <a href="#">Sagar Gharge</a></li>
+            <li>📧 <strong>Email:</strong> <a href="mailto:sagar.gharge10491@gmail.com">sagar.gharge10491@gmail.com</a></li>
         </ul>
-    </div>
+    </section>
 
-    <div class="footer">
+    <!-- Footer -->
+    <footer>
         💡 Always open to collaboration on Linux, AWS, and automation-related projects.
-    </div>
+    </footer>
 
 </div>
 
 </body>
 </html>
+
