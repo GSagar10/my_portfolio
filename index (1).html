@@ -2,77 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sagar Gharge | Linux & AWS Administrator</title>
+    <title>Sagar Gharge | Linux & AWS Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            padding: 0;
             color: #333;
         }
+
         .container {
-            max-width: 1000px;
-            margin: auto;
-            background: #ffffff;
-            padding: 40px;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
         }
+
         header {
+            background: #0f172a;
+            color: #fff;
+            padding: 30px;
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #eee;
         }
+
         header h1 {
             margin: 0;
-            color: #0a4fa3;
             font-size: 36px;
         }
+
         header p {
+            margin-top: 8px;
+            color: #cbd5e1;
             font-size: 18px;
-            color: #555;
         }
-        section {
-            margin-top: 35px;
+
+        .tabs {
+            display: flex;
+            background: #1e293b;
         }
+
+        .tabs button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: none;
+            color: #cbd5e1;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .tabs button:hover,
+        .tabs button.active {
+            background: #0f172a;
+            color: #38bdf8;
+        }
+
+        .content {
+            padding: 30px;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
         h2 {
-            color: #0a4fa3;
-            border-left: 5px solid #0a4fa3;
-            padding-left: 10px;
+            color: #0f172a;
+            margin-bottom: 15px;
         }
-        ul {
-            padding-left: 20px;
+
+        .skills-section {
+            margin-bottom: 25px;
         }
-        li {
+
+        .skills-section h3 {
+            color: #1e40af;
             margin-bottom: 10px;
         }
-        .badges span {
+
+        .skill-badge {
             display: inline-block;
-            background: #0a4fa3;
-            color: #fff;
+            background: #e0f2fe;
+            color: #0369a1;
             padding: 8px 14px;
-            margin: 6px 6px 0 0;
+            margin: 6px;
             border-radius: 20px;
             font-size: 14px;
         }
-        .highlight {
-            background: #f4f8ff;
-            padding: 20px;
-            border-left: 4px solid #0a4fa3;
-        }
-        a {
-            color: #0a4fa3;
+
+        .contact a {
+            display: block;
             text-decoration: none;
-            font-weight: 500;
+            color: #0f172a;
+            margin: 12px 0;
+            font-size: 16px;
         }
+
+        .contact i {
+            color: #38bdf8;
+            margin-right: 10px;
+        }
+
         footer {
-            margin-top: 50px;
+            background: #f1f5f9;
+            padding: 15px;
             text-align: center;
             font-size: 14px;
-            color: #777;
+            color: #475569;
         }
     </style>
 </head>
@@ -80,88 +124,147 @@
 
 <div class="container">
 
-    <!-- Header -->
     <header>
         <h1>👋 Hi, I'm Sagar Gharge</h1>
         <p>💼 Linux & AWS Administrator | Infrastructure Engineer</p>
-        <p>6+ Years of Experience in Linux, Cloud & Automation</p>
     </header>
 
-    <!-- About -->
-    <section>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('about')"><i class="fa-solid fa-user"></i> About</button>
+        <button class="tab-btn" onclick="openTab('skills')"><i class="fa-solid fa-gears"></i> Skills</button>
+        <button class="tab-btn" onclick="openTab('focus')"><i class="fa-solid fa-rocket"></i> Focus</button>
+        <button class="tab-btn" onclick="openTab('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="content active">
         <h2>🛠 About Me</h2>
-        <div class="highlight">
-            <p>
-                I am a passionate <strong>Linux System Administrator</strong> with over
-                <strong>6+ years of hands-on experience</strong> in managing and automating
-                enterprise Linux infrastructure. I specialize in <strong>RHEL, AWS</strong>,
-                and DevOps tools, ensuring high availability, security, and performance
-                for business-critical systems.
-            </p>
+        <p>
+            Linux & AWS Administrator with <b>6+ years</b> of experience managing enterprise infrastructure,
+            automating operations, and ensuring high availability of production environments.
+        </p>
+        <p>
+            Strong expertise in Linux administration, cloud platforms, automation tools,
+            and infrastructure monitoring.
+        </p>
+        <p><i class="fa-solid fa-bolt"></i> Fun fact: I debug servers faster than choosing lunch 😄</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="content">
+        <h2>🚀 Technical Skills</h2>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-desktop"></i> Operating Systems</h3>
+            <span class="skill-badge">RHEL 7 / 8</span>
+            <span class="skill-badge">CentOS 7.9</span>
+            <span class="skill-badge">Unix</span>
+            <span class="skill-badge">Windows 7 / 8 / 10</span>
         </div>
-    </section>
 
-    <!-- Skills -->
-    <section>
-        <h2>🚀 Skills & Technologies</h2>
-        <ul>
-            <li>🖥 <strong>Operating Systems:</strong> Linux (RHEL, Ubuntu)</li>
-            <li>☁️ <strong>Cloud Platform:</strong> Amazon Web Services (AWS)</li>
-            <li>🔧 <strong>Automation:</strong> Ansible Playbooks</li>
-            <li>📦 <strong>Version Control:</strong> Git, GitHub</li>
-            <li>📊 <strong>Monitoring & Support:</strong> Infrastructure Monitoring & Troubleshooting</li>
-        </ul>
-    </section>
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-network-wired"></i> Linux Services</h3>
+            <span class="skill-badge">NFS</span>
+            <span class="skill-badge">Samba</span>
+        </div>
 
-    <!-- Current Focus -->
-    <section>
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-database"></i> Storage Management</h3>
+            <span class="skill-badge">LVM Creation</span>
+            <span class="skill-badge">Resizing</span>
+            <span class="skill-badge">Optimization</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-code"></i> Scripting & Automation</h3>
+            <span class="skill-badge">Shell Scripting</span>
+            <span class="skill-badge">Ansible</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-server"></i> Server Hardware</h3>
+            <span class="skill-badge">Dell PowerEdge</span>
+            <span class="skill-badge">Cisco UCS</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-chart-line"></i> Monitoring & ITSM</h3>
+            <span class="skill-badge">Grafana</span>
+            <span class="skill-badge">ServiceNow</span>
+            <span class="skill-badge">Jira</span>
+            <span class="skill-badge">ManageEngine</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-brands fa-aws"></i> Cloud Platform (AWS)</h3>
+            <span class="skill-badge">EC2</span>
+            <span class="skill-badge">S3</span>
+            <span class="skill-badge">VPC</span>
+            <span class="skill-badge">IAM</span>
+            <span class="skill-badge">RDS</span>
+            <span class="skill-badge">CloudWatch</span>
+            <span class="skill-badge">Lambda</span>
+            <span class="skill-badge">Auto Scaling</span>
+        </div>
+
+        <div class="skills-section">
+            <h3><i class="fa-solid fa-box"></i> DevOps & Cloud Tools</h3>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Terraform (Basic)</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">Kubernetes (Fundamentals)</span>
+        </div>
+    </div>
+
+    <!-- FOCUS -->
+    <div id="focus" class="content">
         <h2>📌 Current Focus</h2>
         <ul>
-            <li>⚙️ Enhancing automation using Ansible</li>
-            <li>☁️ Designing scalable AWS architectures</li>
-            <li>🔁 Exploring CI/CD pipeline integrations</li>
+            <li>⚙ Advanced Ansible automation</li>
+            <li>☁ AWS infrastructure design</li>
+            <li>🔄 CI/CD & DevOps practices</li>
+            <li>📊 Monitoring & reliability engineering</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- GitHub Intro -->
-    <section>
-        <h2>🌟 Quick GitHub Intro</h2>
-        <ul>
-            <li>👀 Interested in DevOps & Cloud Infrastructure</li>
-            <li>🌱 Currently learning advanced DevOps pipelines</li>
-            <li>🤝 Looking to collaborate on Linux, AWS, and automation projects</li>
-            <li>⚡ Fun fact: I can debug a server faster than I can decide what to eat for lunch</li>
-        </ul>
-    </section>
+    <!-- CONTACT -->
+    <div id="contact" class="content contact">
+        <h2>🔗 Connect With Me</h2>
 
-    <!-- Tech Badges -->
-    <section>
-        <h2>🏷 Tech Badges</h2>
-        <div class="badges">
-            <span>Linux</span>
-            <span>AWS</span>
-            <span>Ansible</span>
-            <span>Git</span>
-            <span>DevOps</span>
-        </div>
-    </section>
+        <a href="https://www.linkedin.com/in/sagar-gharge-4017347a" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn: Sagar Gharge
+        </a>
 
-    <!-- Contact -->
-    <section>
-        <h2>🔗 Connect with Me</h2>
-        <ul>
-            <li>🔗 <strong>LinkedIn:</strong> <a href="#">Sagar Gharge</a></li>
-            <li>📧 <strong>Email:</strong> <a href="mailto:sagar.gharge10491@gmail.com">sagar.gharge10491@gmail.com</a></li>
-        </ul>
-    </section>
+        <a href="mailto:sagar.gharge10491@gmail.com">
+            <i class="fa-solid fa-envelope"></i> sagar.gharge10491@gmail.com
+        </a>
 
-    <!-- Footer -->
+        <a href="#">
+            <i class="fa-brands fa-github"></i> GitHub Portfolio
+        </a>
+    </div>
+
     <footer>
-        💡 Always open to collaboration on Linux, AWS, and automation-related projects.
+        💡 Open to Linux, AWS & Automation collaboration opportunities
     </footer>
 
 </div>
 
+<script>
+    function openTab(tabId) {
+        let contents = document.querySelectorAll('.content');
+        let buttons = document.querySelectorAll('.tab-btn');
+
+        contents.forEach(c => c.classList.remove('active'));
+        buttons.forEach(b => b.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
 </body>
 </html>
+
 
